@@ -891,8 +891,8 @@ async function adminLogin(e){
   // 관리자 로그인 직후 서버의 최신 상품 정보를 불러와 기기간 총판명 변경을 반영합니다.
   await refreshProducts(true);
   if(cloudLoadError)throw Error('서버 상품 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
-  updateAdminHeader();navigate('home');toast('관리자 로그인 성공.');
- }catch(err){toast(err.message||'관리자 로그인 실패.');}
+  updateAdminHeader();navigate('home');toast('관리자계정으로 로그인하였습니다.');
+ }catch(err){toast(err.message||'관리자계정으로 로그인 실패하였습니다.');}
  finally{btn.disabled=false;}
 }
 function adminProductLink(p,content,className){
